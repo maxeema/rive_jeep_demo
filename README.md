@@ -1,6 +1,9 @@
-# rive_example
+# rive_jeep_demo
 
-A new Flutter project.
+Rive sample project for Flutter with Jeep
+https://blog.rive.app/rives-flutter-runtime-part-1/
+
+![](screens/rive-jeep-demo-screen.gif)
 
 ## Getting Started
 
