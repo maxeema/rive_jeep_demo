@@ -1,7 +1,10 @@
 # rive_jeep_demo
 
 Rive sample project for Flutter with Jeep
+
 https://blog.rive.app/rives-flutter-runtime-part-1/
+
+https://maxeema.github.io/rive_jeep_demo/
 
 ![](screens/rive-jeep-demo-screen.gif)
 
