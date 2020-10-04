@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 
+// https://blog.rive.app/rives-flutter-runtime-part-1/
+
+const _rive_asset = 'assets/off_road_car.riv';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gone fishing.',
+      debugShowCheckedModeBanner: false,
+      title: 'Rive Jeep Demo',
       home: Scaffold(
         body: MyRiveAnimation(),
       ),
@@ -22,7 +27,6 @@ class MyRiveAnimation extends StatefulWidget {
 }
 
 class _MyRiveAnimationState extends State<MyRiveAnimation> {
-  final riveFileName = 'assets/off_road_car.riv';
   Artboard _artboard;
   WiperAnimation _wipersController;
   SimpleAnimation _idleController;
@@ -37,7 +41,7 @@ class _MyRiveAnimationState extends State<MyRiveAnimation> {
   }
 
   void _loadRiveFile() async {
-    final bytes = await rootBundle.load(riveFileName);
+    final bytes = await rootBundle.load(_rive_asset);
     final file = RiveFile();
 
     if (file.import(bytes)) {
